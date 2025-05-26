@@ -40,12 +40,4 @@ def pregunta_01():
     df.drop_duplicates(inplace=True)
     df.dropna(inplace=True)
 
-    # df.fecha_de_beneficio = pd.to_datetime(df.fecha_de_beneficio, format="%Y/%m/%d", errors="coerce")
-
-    pd.set_option("display.max_rows", None)
-    print(df.fecha_de_beneficio.value_counts().shape[0])
-
     df.to_csv(os.path.join(output_dir, output_file), index=False, sep=";")
-
-
-pregunta_01()
